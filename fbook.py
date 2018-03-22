@@ -17,3 +17,9 @@ data = urllib.request.urlopen(req).read().decode("utf-8")
 data = json.loads(data)
 print(data)
 print(data.get('access_token'))
+
+graph = facebook.GraphAPI(access_token="EAAHMdK8cR7MBAI42ZAhPY04ZBo4amUyKKZCMPSkblF56wqO1xngmaTSZChb1xRa5Psuk4QbnjR7duD4qEczHeoPTFFs6gfQXnaN1JwjstUWHFWWNDnPMfuhysx5C4ZCIMmAkLpYI0FQIfbdQAYnNagZBOAil3GCnllKpjMLRqASV4qn5uDaQRFrV2O9XFZCPecZD", version='2.7')
+
+# Get all of the authenticated user's friends
+friends = graph.get_connections(id='me', connection_name='')
+print(friends)
