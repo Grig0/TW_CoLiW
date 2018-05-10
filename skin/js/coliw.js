@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0ad90616afedbea0922d8c74d309330993355645
 $(function() {
      $('#command-window').on('keypress', function (e) {
          if(e.which === 13){
